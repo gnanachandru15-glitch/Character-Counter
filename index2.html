@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Counter</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #2563eb);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 480px;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 28px;
+        border-radius: 16px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        margin: 0 0 8px;
+        color: #1e3a8a;
+        text-align: center;
+      }
+
+      .subtitle {
+        margin: 0 0 16px;
+        text-align: center;
+        color: #64748b;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 160px;
+        padding: 14px;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        resize: vertical;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      textarea:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+      }
+
+      .meta {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.95rem;
+        color: #475569;
+      }
+
+      .counter {
+        font-weight: 700;
+        color: #2563eb;
+      }
+
+      .warning {
+        color: #dc2626;
+        font-weight: 600;
+        display: none;
+      }
+
+      .warning.show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Character Counter</h2>
+      <p class="subtitle">Type your message below</p>
+
+      <textarea id="message" maxlength="200" placeholder="Write something here..."></textarea>
+
+      <div class="meta">
+        <span id="limitText">200 characters max</span>
+        <span id="counter" class="counter">0/200 characters</span>
+      </div>
+      <p id="warning" class="warning">Character limit reached! You cannot type more.</p>
+    </div>
+
+    <script src="js script.js"></script>
+  </body>
+</html>
